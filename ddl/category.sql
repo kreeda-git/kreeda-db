@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS category;
+DROP TABLE IF EXISTS category CASCADE;
 
 CREATE TABLE category
 (
@@ -6,9 +6,5 @@ CREATE TABLE category
     category VARCHAR(200) NOT NULL,
     sub_category VARCHAR(200),  
     category_level VARCHAR(200) NOT NULL, 
-    active BOOLEAN DEFAULT TRUE, 
-	created_by INT NOT NULL,
-	created_date TIMESTAMP NOT NULL DEFAULT NOW(),
-	last_modified_by INT NOT NULL,
-	last_modified_date TIMESTAMP NOT NULL DEFAULT NOW()
+    active BOOLEAN DEFAULT TRUE
 );

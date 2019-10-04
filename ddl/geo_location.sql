@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS geo_location;
+DROP TABLE IF EXISTS geo_location CASCADE;
 
 CREATE TABLE geo_location
 (
@@ -6,10 +6,5 @@ CREATE TABLE geo_location
     name VARCHAR(200) NOT NULL,
     details JSONB,
     location GEOGRAPHY NOT NULL,
-    active BOOLEAN DEFAULT TRUE, 
-	created_by INT NOT NULL,
-	created_date TIMESTAMP NOT NULL DEFAULT NOW(),
-	last_modified_by INT NOT NULL,
-	last_modified_date TIMESTAMP NOT NULL DEFAULT NOW(),
-    version INT NOT NULL
+    active BOOLEAN DEFAULT TRUE
 );

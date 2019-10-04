@@ -10,10 +10,5 @@ CREATE TABLE event_schedule
     end_time TIMESTAMP,
     recurrence BOOLEAN DEFAULT FALSE, 
     details JSONB,
-    active BOOLEAN DEFAULT TRUE, 
-	created_by INT NOT NULL,
-	created_date TIMESTAMP NOT NULL DEFAULT NOW(),
-	last_modified_by INT NOT NULL,
-	last_modified_date TIMESTAMP NOT NULL DEFAULT NOW(),
-    version INT NOT NULL
+    active BOOLEAN DEFAULT TRUE
 );

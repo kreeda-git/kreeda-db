@@ -10,10 +10,5 @@ CREATE TABLE event
     min_participants INT NOT NULL DEFAULT 1,
     max_participants  INT,
     details JSONB,
-    active BOOLEAN DEFAULT TRUE, 
-	created_by INT NOT NULL,
-	created_date TIMESTAMP NOT NULL DEFAULT NOW(),
-	last_modified_by INT NOT NULL,
-	last_modified_date TIMESTAMP NOT NULL DEFAULT NOW(),
-	version INT NOT NULL
+    active BOOLEAN DEFAULT TRUE
 );
